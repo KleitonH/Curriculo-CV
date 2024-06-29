@@ -1,0 +1,257 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bedrock {
+    margin-right: 5%; /*Estrutura matriz da página, responsável por demarcar a distância limite das margens do site (Obs: Entendeu a referência? ;> )*/
+    margin-left: 5%;
+}
+
+body {
+    text-align: center; /*Alinhamento geral do texto da página*/
+    background-image: url(Images/img_02.jpg); /*Personalização do fundo*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Glacial Indifference R, sans-serif; color: white;
+}
+
+h2 { /*Fonte geral dos títulos*/
+    font-family: Glacial Indifference B;
+}
+
+.a-1 { /*link padrão*/
+    text-decoration: none;
+    color: #ffffff;
+}
+
+p { /*Fonte e espeçamento geral dos parágrafos*/
+    font-family: Glacial Indifference R;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+nav { /*navegação*/
+    background-color: rgb(3, 35, 55);
+    height: 100px;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 5px solid rgb(102, 184, 236);
+    border-top: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.head-1, .head-2, .head-3, .head-4, .head-5 { /*As 5 abas do currículo*/    
+    position: relative; /* Define a posição do elemento para que siga a div maior */
+    max-height: 50px;
+    top: 18px;
+    border: 5px solid transparent;
+    border-width: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.head-1:hover, .head-2:hover, .head-3:hover, .head-4:hover { /*reação dos tópicos ao mouse apontá-los.*/
+    margin-block: 2px;
+    background-color: #ffffff;
+    border-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.head-5:hover {
+    background-color: #ffffff;
+    border-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.contacts { /*Caixa compactada do contéudo da contacts, antes da interação*/
+    position: fixed;
+    height: 0px;
+    min-height: 0;
+    width: 7.5%;
+    min-width: 4em;
+    margin-top: 32px;
+    z-index: 9999;
+}
+
+.contacts.exp { /*Caixa expandida dos meios de contatos e mídias sociais*/
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    visibility: visible;
+    height: 260px;
+    min-height: 0;
+    width: 7.5%;
+    min-width: 4em;
+    margin-top: 27px;
+    z-index: 9999;
+    background-color:rgb(3, 35, 55);
+    border: 5px solid rgb(102, 184, 236);
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: height 0.9s;
+    cursor: auto;
+}
+
+.a-cont {
+    font-size: 2em;
+    color: white;
+}
+
+.container{ /*caixa principal do início*/
+    background-color: rgb(3, 35, 55);
+    position: absolute; bottom: 0; left: 15%;
+    height: 450px;
+    width: 70%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 5px solid rgb(102, 184, 236);
+    border-bottom: none;
+    transition: all 0.9s ease;
+    overflow: visible;
+}
+
+.container.exp { /*caixa expandida*/
+    height: 80%;
+    width: 78%;
+    left: 11%;
+    overflow: hidden;
+}
+
+.photo_space{ /*Espaço de alojamento da foto de perfil*/
+    background-color: rgb(102, 184, 236);
+    position: relative; /* Define a posição do elemento para que siga a div maior */
+    top: -105px;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    transition: 0.2s ease;
+}
+
+.photo { /*Formato da foto do perfil*/
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease;
+}
+
+.photo img { /*Imagem do perfil*/
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.name { /*Nome do perfil. Efeitos de transição reciclados para demais elementos*/
+    font-size: 27px;
+    position: relative; /* Define a posição do elemento para que siga a div maior */
+    left: 0%;
+    bottom: 25%;
+    transition: 0.2s ease;
+}
+
+.hello { /*Introdução do perfil*/
+    font-size: 18px;
+
+}
+
+.hide { /*Tranforma divs para que sejam ocultadas quando necessário*/
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#img-block, #img-block-2 { /*Faz um bloco para alocação da content-1*/
+    display: flex;
+    justify-content: space-between;
+}
+
+#img-block > div { /*Alinha o conteúdo alojado as imagens em três colunas*/
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-block-2 > div{ /*Alinha o conteúdo em duas colunas*/
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-img-1, .cont-img-2, .cont-img-3 { /*Define o posicionamento das três colunas em relação ao content-1*/
+    margin-bottom: 1rem;
+}
+
+#content-1, #content-2, #content-3, #content-4 { /*Espaço total com título*/
+    font-size: 35px;
+    display: none;
+    transition: 0.8s ease;
+}
+
+.cont-img-1, .cont-img-2, .cont-img-3 { /*Espaço em formartação de colunas das escolas*/
+    width: 125px;
+    height: 125px;
+    border-radius: 50%; /* Torna a imagem um círculo*/
+    overflow: hidden; /* Esconde conteúdo fora dos limites do círculo */
+    border: 1px solid white;
+    margin-top: 10%;
+}
+
+.cont-img-3 { /*formatação de fundo específica da terceira escola*/
+    background-color: white;
+}
+
+.h2-ttl {
+    font-size: 40px;
+}
+
+.h2-sbt { /*Subtítulos*/
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.p-1, .p-2 { /*Parágrafos maiores*/
+    font-size: 20px;
+}
+
+.p-2 { /*Um parágrafo de inserção com margem abaixo*/
+    margin-bottom: 22px;
+}
+
+.p-3 { /*Parágrafo para inserção de texto reduzido*/
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: -20px;
+}
+
+hr { /*Quebra de linha padrão*/
+    display: none;
+}
+
+@font-face { /*Importação de fonte*/
+    font-family: Glacial Indifference R;
+    src: url(fonts/GlacialIndifference-Regular.woff2) format(woff2);
+}
+
+@font-face {
+    font-family: Glacial Indifference B;
+    src: url(fonts/GlacialIndifference-Bold.woff2) format(woff2);
+}
